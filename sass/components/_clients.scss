@@ -1,0 +1,41 @@
+.clients {
+  display: block;
+
+  &__icons-list {
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__icon-cont {
+    min-width: 170px;
+    min-height: 92px;
+    border: 1px solid $tertiary-accent-color;
+    border-radius: 4px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    fill: $tertiary-accent-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon-cont:hover,
+  &__icon-cont:focus,
+  &__icon-cont:active {
+    border-color: $primary-accent-color;
+  }
+
+  &__icon-cont:hover &__icon,
+  &__icon-cont:focus &__icon,
+  &__icon-cont:active &__icon {
+    fill: $primary-accent-color;
+  }
+}

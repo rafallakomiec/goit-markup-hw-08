@@ -1,0 +1,16 @@
+.logo {
+  color: $secondary-accent-color;
+  font-family: $secondary-font;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  &__first-half {
+    color: $primary-accent-color;
+  }
+
+  &--altcolor {
+    color: $tertiary-txt-color;
+  }
+}
