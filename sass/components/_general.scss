@@ -25,13 +25,15 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 15px;
-  max-width: 1200px;
+  width: 100vw;
+  min-width: 320px;
+  max-width: 479px;
 }
 
 .header__container {
-  padding: 24px 15px;
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,5 +74,20 @@ body {
 
   &__projects-gallery {
     padding-top: 0;
+  }
+}
+@media screen and (min-width: #{$breakpoint-phone}) {
+  .container {
+    max-width: 767px;
+  }
+  .header__container {
+    padding: 24px 15px;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet}) {
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
   }
 }

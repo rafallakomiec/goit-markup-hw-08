@@ -5,7 +5,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+body {
   margin: 0;
   padding: 0;
 }
@@ -17,4 +18,8 @@ fieldset {
   padding-inline-start: 0;
   padding-inline-end: 0;
   padding-block-end: 0;
+}
+
+img {
+  display: block;
 }

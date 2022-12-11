@@ -1,28 +1,21 @@
 .header {
   border-bottom: 1px solid #ececec;
+  font-size: 12px;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-}
-
-.header__navigation {
-  min-width: 42%;
-  flex-grow: 1;
+  justify-content: space-around;
 }
 
 .navigation__link-list {
   list-style: none;
-  display: flex;
-  margin-left: 93px;
+  display: none;
+  justify-content: space-around;
 
   &-point {
     position: relative;
-  }
-
-  &-point--internal-margin {
-    margin-left: 46px;
   }
 }
 
@@ -54,21 +47,10 @@
 
 .contact-list {
   list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.header__contact-list {
-  min-width: 25%;
-}
-
-.contact-list__point {
-  margin: 0;
-
-  &--internal-margin {
-    margin-left: 50px;
-  }
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .contact-list__link {
@@ -97,4 +79,67 @@
 .contact-list__link:focus .contact-list__icon,
 .contact-list__link:active .contact-list__icon {
   fill: $primary-accent-color;
+}
+
+.header__mobile-menu {
+  &-btn {
+    min-width: 40px;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &-icon {
+    fill: $secondary-accent-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &-btn:hover &-icon,
+  &-btn:focus &-icon {
+    fill: $primary-accent-color;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-phone}) {
+  .header__mobile-menu-btn {
+    display: none;
+  }
+
+  .navigation__link-list {
+    display: flex;
+  }
+
+  .contact-list {
+    display: flex;
+  }
+
+  .contact-list__point--internal-margin {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet}) {
+  .header {
+    font-size: 14px;
+  }
+
+  .header__contact-list {
+    max-width: 45%;
+  }
+
+  .contact-list {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .contact-list__point {
+    margin: 0;
+
+    &--internal-margin {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+  }
 }
