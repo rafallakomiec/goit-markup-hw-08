@@ -42,7 +42,7 @@
     border-radius: 2px;
     background-color: $primary-accent-color;
     position: absolute;
-    bottom: -32px;
+    bottom: -33px;
     left: 0;
   }
 }
@@ -117,10 +117,6 @@
     fill: $primary-accent-color;
   }
 }
-
-// @media screen and (min-width: #{$breakpoint-phone}) {
-
-// }
 
 @media screen and (min-width: #{$breakpoint-tablet}) {
   .header__mobile-menu-btn {

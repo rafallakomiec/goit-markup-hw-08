@@ -4,21 +4,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  min-height: 400px;
 
   &__title {
     color: $tertiary-txt-color;
-    font-size: 44px;
+    font-size: 26px;
     text-transform: uppercase;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.6;
     letter-spacing: 0.06em;
-    max-width: 696px;
+    max-width: 365px;
   }
 
   &__btn {
     margin-top: 30px;
-    padding: 10px 42px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
     background-color: $primary-accent-color;
     color: $tertiary-txt-color;
     border: none;
@@ -28,7 +30,9 @@
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
+    text-align: center;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -37,5 +41,17 @@
   &__btn:focus {
     background-color: $tertiary-bg-color;
     color: $secondary-txt-color;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-desktop}) {
+  .banner {
+    min-height: 600px;
+
+    &__title {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
