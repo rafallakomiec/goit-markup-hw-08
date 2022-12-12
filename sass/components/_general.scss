@@ -144,11 +144,11 @@ body {
   .container {
     max-width: 1200px;
   }
-  
+
   .footer__container {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
     flex-wrap: nowrap;
   }
 }
