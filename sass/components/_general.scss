@@ -39,7 +39,8 @@ body {
 .footer__container {
   padding: 60px 15px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section {
@@ -94,6 +95,13 @@ body {
     background-image: linear-gradient(to bottom, #2f303a00, #2f303aff),
       url('../images/banner-tablet.jpg');
   }
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
 }
 
 @media screen and (min-width: #{$breakpoint-tablet}) and 
@@ -135,6 +143,13 @@ body {
 
   .container {
     max-width: 1200px;
+  }
+  
+  .footer__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
   }
 }
 
