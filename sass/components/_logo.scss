@@ -1,11 +1,11 @@
 .logo {
   color: $secondary-accent-color;
   font-family: $secondary-font;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
-  flex-basis: min-content;
 
   &__first-half {
     color: $primary-accent-color;
@@ -13,5 +13,10 @@
 
   &--altcolor {
     color: $tertiary-txt-color;
+  }
+}
+@media screen and (min-width: #{$breakpoint-desktop}) {
+  .logo {
+    font-size: 26px;
   }
 }
