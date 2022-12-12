@@ -1,12 +1,12 @@
 $breakpoint-phone: 480px;
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 1200px;
+$breakpoint-desktop: 1200px; /* no signifant purpose in this project */
 
-@media screen and (min-width: #{$breakpoint-phone}) {
-}
+// @media screen and (min-width: #{$breakpoint-phone}) {
+// }
 
-@media screen and (min-width: #{$breakpoint-tablet}) {
-}
+// @media screen and (min-width: #{$breakpoint-tablet}) {
+// }
 
 $primary-font: Roboto, sans-serif;
 $secondary-font: Raleway, sans-serif;
