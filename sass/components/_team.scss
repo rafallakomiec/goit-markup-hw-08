@@ -45,7 +45,7 @@
   .team {
     &__card-list {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: 30px;
       flex-wrap: wrap;
     }
@@ -64,18 +64,14 @@
 @media screen and (min-width: #{$breakpoint-desktop}) {
   .team {
     &__card-list {
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: nowrap;
-      gap: 0;
+      gap: 30px;
     }
 
     &__card {
       flex-basis: 270px;
       padding-bottom: 18px;
-    }
-
-    &__card--internal-margin {
-      margin-left: 30px;
     }
   }
 }

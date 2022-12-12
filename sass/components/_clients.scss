@@ -7,10 +7,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 30px;
   }
 
   &__icon-cont {
-    min-width: 170px;
+    flex-grow: 1;
     min-height: 92px;
     border: 1px solid $tertiary-accent-color;
     border-radius: 4px;
@@ -37,5 +38,17 @@
   &__icon-cont:focus &__icon,
   &__icon-cont:active &__icon {
     fill: $primary-accent-color;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet}) {
+  .clients__icon-cont {
+    flex-basis: 210px;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-desktop}) {
+  .clients__icon-cont {
+    flex-basis: 170px;
   }
 }
